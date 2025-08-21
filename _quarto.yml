@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Quarto RevealJS Presentation"
+  site-url: https://github.com/pages/
+  
+format:
+  clean-revealjs:
+    theme: [default, _extensions/clean/clean.scss]
+    menu:
+      side: left
+    slide-number: true
+    date-format: long
+    self-contained: false
+    output-file: index.html

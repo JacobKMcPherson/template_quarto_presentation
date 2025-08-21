@@ -1,0 +1,44 @@
+name: Render and Deploy Quarto Presentation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  render-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+      with:
+        tinytex: true
+
+    - name: Render Quarto presentation
+      run: |
+        quarto render template.qmd --to revealjs
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      if: github.ref == 'refs/heads/main'
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        path: '.'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      if: github.ref == 'refs/heads/main'
