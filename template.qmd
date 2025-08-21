@@ -47,19 +47,23 @@ Cross-references
 - `.button` class provides a Beamer-like button, e.g.
 [[Summary]{.button}](#sec-summary)
 
-## Want more?
+## Template Features
 
-### See our longer demo slides
+### Easy customization and automatic deployment
 
-We've deliberarely kept this template lean, to get you up and running as fast as
-possible.
+This template is designed to be simple yet powerful:
 
-We provide a separate
-[demo template](https://github.com/grantmcdermott/quarto-revealjs-clean-demo),
-with more examples for integrating code, tables, figures, etc.
+**Template Benefits:**
+- Automated deployment with every push
+- No manual setup required after initial configuration  
+- Clean, professional theme included
+- Responsive design works on all devices
 
-  - See the live demo slides
-  [here](https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html).
+**Next Steps:**
+- Edit this file (`template.qmd`) with your content
+- Customize the theme colors in `_extensions/clean/clean.scss`
+- Add your own images to the repository
+- Push to GitHub and watch it deploy automatically!
 
 ## Summary {#sec-summary}
 

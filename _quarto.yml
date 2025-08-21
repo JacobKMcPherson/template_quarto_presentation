@@ -1,11 +1,7 @@
 project:
-  type: website
-  output-dir: _site
+  type: default
+  output-dir: .
 
-website:
-  title: "Quarto RevealJS Presentation"
-  site-url: https://github.com/pages/
-  
 format:
   clean-revealjs:
     theme: [default, _extensions/clean/clean.scss]

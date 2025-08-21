@@ -24,6 +24,10 @@ A template repository for creating beautiful, minimalist presentations using Qua
 
 Your presentation will be available at: `https://yourusername.github.io/your-repo-name/`
 
+## 🎯 Live Example
+
+You can see this template in action at: [https://jacobkmcpherson.github.io/template_quarto_presentation/](https://jacobkmcpherson.github.io/template_quarto_presentation/) (after the workflow runs)
+
 ## 📝 Customization
 
 ### Edit Your Presentation
