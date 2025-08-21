@@ -10,4 +10,13 @@ contributes:
         side: left
       slide-number: true
       date-format: long
+      chalkboard:
+        theme: chalkboard
+        grid: false
+        boardmarkers : false
+        navigation: true
+        buttons: true
+      multiplex: false
+      scrollable: true
+      footer: '<a href="https://github.com/JacobKMcPherson/template_quarto_presentation" target="_blank">🔗 View on GitHub</a>'
 
