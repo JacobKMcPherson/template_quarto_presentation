@@ -1,3 +1,5 @@
 .DS_Store
-# template.html
-template_files/
+# Quarto output
+/template.html
+/template_files/
+/.quarto/
