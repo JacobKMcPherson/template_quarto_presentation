@@ -5,6 +5,15 @@ format:
   clean-revealjs:
     output-file: index.html
     self-contained: false
+    chalkboard:
+      theme: chalkboard
+      grid: false
+      boardmarkers: false
+      navigation: true
+      buttons: true
+    multiplex: false
+    scrollable: true
+    footer: '<a href="https://github.com/JacobKMcPherson/template_quarto_presentation" target="_blank">🔗 View on GitHub</a>'
 html-math-method:
   method: mathjax
   url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
@@ -46,6 +55,46 @@ Cross-references
 
 - `.button` class provides a Beamer-like button, e.g.
 [[Summary]{.button}](#sec-summary)
+
+## Interactive Features
+
+### Keyboard shortcuts for enhanced presentation
+
+This template now includes several interactive features:
+
+**Drawing and Notes:**
+- Press **`c`** to open the chalkboard for drawing
+- Press **`b`** to toggle the notes canvas
+- Press **`s`** to open speaker view with notes
+
+**Navigation:**
+- Press **`r`** to toggle scroll view mode
+- Press **`f`** for fullscreen mode
+- Press **`o`** for slide overview
+
+**Additional Tools:**
+- Press **`?`** for keyboard help
+- Press **`Esc`** to exit any mode
+
+::: {.notes}
+This is a speaker note that will only be visible in speaker view (press 's'). You can add presenter notes to any slide using this format.
+:::
+
+### Multiplex Support
+
+To enable multiplex (synchronized presentations across multiple devices):
+
+1. Set `multiplex: true` in your YAML configuration
+2. Add your socket.io server URL and secret
+3. Example configuration:
+```yaml
+format:
+  clean-revealjs:
+    multiplex:
+      url: 'https://reveal-multiplex.glitch.me/'
+      secret: 'your-secret-key'
+      id: 'your-presentation-id'
+```
 
 ## Template Features
 

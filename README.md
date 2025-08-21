@@ -12,6 +12,18 @@ A template repository for creating beautiful, minimalist presentations using Qua
 - 🔧 **Easy Setup**: Just edit the `.qmd` file and push - everything else is handled automatically
 - 🌐 **GitHub Pages**: Your presentation is automatically published online
 
+### 🎪 Interactive Features
+
+- **🖍️ Chalkboard Drawing** - Press `c` to draw on slides
+- **📝 Notes Canvas** - Press `b` for note-taking overlay  
+- **🗣️ Speaker View** - Press `s` for presenter notes and timer
+- **📜 Scroll View** - Press `r` to scroll through slides
+- **🔍 Overview Mode** - Press `o` to see all slides at once
+- **⬛ Fullscreen** - Press `f` for distraction-free presenting
+- **📚 Slide Menu** - Hamburger menu for navigation
+- **🔗 GitHub Footer** - Direct link back to repository
+- **📡 Multiplex Ready** - Easy setup for synchronized presentations
+
 ## 🚀 Quick Start
 
 1. **Use this template**: Click the "Use this template" button on GitHub
@@ -81,6 +93,19 @@ quarto preview template.qmd
 └── README.md                     # This file
 ```
 
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| `b` | Toggle notes canvas for drawing |
+| `c` | Open chalkboard for drawing |
+| `s` | Speaker view with notes and timer |
+| `r` | Toggle scroll view mode |
+| `f` | Enter fullscreen mode |
+| `o` | Overview of all slides |
+| `?` | Show keyboard help |
+| `Esc` | Exit current mode |
+
 ## 🔧 Advanced Configuration
 
 ### GitHub Actions Workflow
@@ -103,6 +128,29 @@ The `_quarto.yml` file contains project-wide settings. You can customize:
 - Output directory
 - Default format options
 - Website metadata
+
+### Multiplex Setup
+
+To enable synchronized presentations across multiple devices:
+
+1. **Edit your YAML frontmatter** in `template.qmd`:
+```yaml
+format:
+  clean-revealjs:
+    multiplex:
+      url: 'https://reveal-multiplex.glitch.me/'
+      secret: 'your-secret-key'  # For presenter
+      id: 'your-presentation-id'
+```
+
+2. **For attendees** (view-only), remove the `secret` field:
+```yaml
+multiplex:
+  url: 'https://reveal-multiplex.glitch.me/'
+  id: 'your-presentation-id'
+```
+
+3. **Hosting**: You can use the free Glitch service or set up your own socket.io server.
 
 ## 📚 Resources
 
